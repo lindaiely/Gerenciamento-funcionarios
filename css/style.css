@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body, html{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    height: 100%;
+    grid-template: "topo topo"
+                   "menu conteudo" auto / 1fr 3fr;
+    grid-template-rows: auto;
+
+}
+#topo{
+    grid-area: topo;
+    padding: 20px 0;
+    background-color: #2C3359;
+    color: #F2EDE4;
+    font-size: 0.9rem;
+}
+#topo h1{
+    border-bottom: 1px solid #F2EDE4;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+#menu{
+    grid-area: menu;
+    background-color: #2C3359;
+}
+#menu a{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #F2EDE4;
+}
+#menu a:hover{
+    color: #2C3359;
+    background-color: #F2EDE4;
+}
+#conteudo{
+    grid-area: conteudo;
+    min-height: 100vh;
+    background-color: #F2EDE4;
+    padding: 1rem;
+}
