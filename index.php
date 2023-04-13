@@ -1,5 +1,5 @@
 <?php require_once "components/topo.php"; ?>
 
-    <p>Seja bem vindo ao sistema de gerenciamento de funcionários.</p>
+    <h3>Seja bem vindo ao sistema de gerenciamento de funcionários.</h3>
 
 <?php require_once "components/rodape.php"; ?>
