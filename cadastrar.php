@@ -1,15 +1,21 @@
-<?php require_once "components/topo.php"; ?>
+<?php
+    require_once "components/topo.php";
+    require_once "conexao/db.php";
+
+    $sql = "SELECT * FROM cargos ORDER BY nomecargo";
+    $resultSetCargo = $conn->query($sql);
+?>
 
     <h2>CADASTRAR FUNCIONÁRIO</h2>
 
-    <form action="">
+    <form action="save_funcionario.php" method="post">
         <div class="w-100">
             <label for="nome">Nome</label>
             <input type="text" name="nome" class="field-form">
         </div>
         <div class="w-50">
             <label for="cpf">Cpf</label>
-            <input type="text" name="capf" class="field-form">
+            <input type="text" name="cpf" class="field-form">
         </div>
         <div class="w-50">
             <label for="email">Email</label>
@@ -33,6 +39,14 @@
             <label for="cargo">Cargo</label>
             <select name="cargo" id="cargo" class="field-form">
                 <option value=""></option>
+                <?php
+                    if(mysqli_num_rows($resultSetCargo) > 0){
+                        while($registroCargo = mysqli_fetch_assoc($resultSetCargo)){
+                            echo "<option value='" . $registroCargo["idcargo"] ."'>"
+                            . $registroCargo["nomecargo"] ."</option>";
+                        }
+                    }
+                ?>
             </select>
         </div>
         <div class="w-50">
