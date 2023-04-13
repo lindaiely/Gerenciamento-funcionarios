@@ -104,3 +104,10 @@ body, html{
 .my-table tbody{
     text-align: left;
 }
+div #resposta{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #75B8BF;
+    color: #F2EDE4;
+    background-color: #2C3359;
+}

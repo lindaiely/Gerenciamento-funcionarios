@@ -19,3 +19,9 @@
             <a href="cargos.php">CARGOS</a>
         </nav>
         <main id="conteudo">
+
+        <?php
+            if(isset($_GET["m"])){
+                echo "<div id='resposta'>" . base64_decode($_GET["m"]) . "</div>";
+            }
+        ?>
